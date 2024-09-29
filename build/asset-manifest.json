@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/safenest/static/css/main.f1eba4fe.css",
+    "main.js": "/safenest/static/js/main.599dd645.js",
+    "static/js/453.9eada40e.chunk.js": "/safenest/static/js/453.9eada40e.chunk.js",
+    "static/media/welcomePage.png": "/safenest/static/media/welcomePage.4e21963cdbfdbf11e7d2.png",
+    "static/media/logo.png": "/safenest/static/media/logo.69c403f0c9b1af469869.png",
+    "index.html": "/safenest/index.html",
+    "main.f1eba4fe.css.map": "/safenest/static/css/main.f1eba4fe.css.map",
+    "main.599dd645.js.map": "/safenest/static/js/main.599dd645.js.map",
+    "453.9eada40e.chunk.js.map": "/safenest/static/js/453.9eada40e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1eba4fe.css",
+    "static/js/main.599dd645.js"
+  ]
+}

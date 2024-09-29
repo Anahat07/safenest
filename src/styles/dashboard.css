@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --main-bg: linear-gradient(to right, #f0f8ff, #ffe4e1);
+  --sidebar-bg: #eb9fa0;
+  --sidebar-hover: #ed8587;
+  --text-color: #000000;
+  --button-color: #eb6466;
+}
+
+.dashboard {
+  background: var(--main-bg);
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: var(--sidebar-bg);
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+  transform: translateX(200px);
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.sidebar-link {
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s, padding 0.3s;
+  padding: 12px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.sidebar-link:hover {
+  background-color: var(--sidebar-hover);
+  padding-left: 20px;
+}
+
+.sidebar-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #e74c3c;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-link:hover::after,
+.sidebar-link.active::after {
+  opacity: 1;
+}
+
+.toggle-sidebar {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.toggle-sidebar:hover {
+  background-color: #e55b63; /* Adjusted for proper hover effect */
+}
+
+.content {
+  margin-left: 200px; /* Ensures the main content doesn't overlap with the sidebar */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  width: calc(100% - 200px);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emergency-exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.emergency-button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+}
+
+.hero-section {
+  max-width: 1000px; /* Increased width */
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.slogan {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #666;
+  font-weight: 400;
+}
+
+.goals-container {
+  display: flex; /* Use flex to position containers side by side */
+  gap: 20px; /* Space between containers */
+  width: 100%; /* Full width of the hero section */
+}
+
+.current-goals,
+.october-tasks-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex: 1; /* Allow both containers to grow equally */
+}
+
+.progress-bars {
+  display: grid; /* Changed to grid */
+  grid-template-columns: 1fr; /* Single column for goals */
+  gap: 20px; /* Space between goals */
+}
+
+.progress-bar {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px; /* Adjusted padding */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.progress-bar:hover {
+  transform: scale(1.02);
+}
+
+.goal-info {
+  margin-bottom: 5px; /* Reduced vertical spacing */
+}
+
+.outer-progress {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.inner-progress {
+  height: 10px;
+  background-color: #3498db;
+  border-radius: 10px;
+  position: relative;
+  transition: width 0.5s ease;
+}
+
+.progress-percentage {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  font-weight: 600;
+}
+
+.october-tasks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* Space between tasks */
+  list-style: none;
+  padding: 0;
+}
+
+.task-card {
+  background-color: #eb9fa0;
+  padding: 10px; /* Adjusted padding */
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+}
+
+.task-card p {
+  margin: 5px 0; /* Reduced vertical spacing */
+}

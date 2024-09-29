@@ -1,0 +1,102 @@
+.financial-page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.financial-page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #f0f8ff, #ffe4e1);
+  padding-top: 50px; 
+}
+
+.financial-info-container {
+  background-color: #ffffff; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  margin: 50px auto;
+  transition: transform 0.3s;
+}
+
+.financial-info-container:hover {
+  transform: scale(1.01); 
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600; 
+  color: #555; 
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc; 
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+input[type='number']:focus {
+  border-color: #ff758f; 
+  outline: none; 
+  box-shadow: 0 0 5px rgba(255, 117, 143, 0.5); 
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; 
+}
+
+.back-button,
+.submit-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold; 
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+.back-button {
+  background-color: #f0f0f0; 
+  color: #333;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-1px); 
+}
+
+.submit-button {
+  background-color: #ff758f; 
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #ff4f75; 
+  transform: translateY(-1px); 
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}

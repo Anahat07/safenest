@@ -1,0 +1,31 @@
+@import url('index.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AISHU CODE */
+
+/* Custom blur class */
+.backdrop-blur-strong {
+    backdrop-filter: blur(20px); /* Increase the blur value */
+    transition: backdrop-filter 0.3s ease-in-out;
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .bounce-on-hover:hover {
+    animation: bounce 1s;
+  }
+  
+  /*AISHU CODE END */

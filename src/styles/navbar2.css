@@ -1,0 +1,102 @@
+@import url('index.css');
+
+/* Main navbar container */
+.navbar {
+  width: calc(100% - 40vw);
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #ed8587;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Push logo to left, buttons to right */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50px; /* Adjust this value to move the navbar down */
+  left: 0; /* Align left edge of the screen */
+  right: 0; /* Align right edge of the screen */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/* Flex container for the logo */
+.logo {
+  flex: 0 0 auto; /* Ensure the logo stays fixed on the left side */
+  margin-left: 0; /* Remove any left margin */
+  padding-left: 0; /* Optional: ensure no padding on the left */
+}
+
+.logo img {
+  height: 50px; /* Adjust the size of your logo image */
+}
+
+/* Flex container for the navigation buttons */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-left: auto; /* Ensure the buttons are pushed to the right */
+}
+
+/* Align individual nav items (buttons) */
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px; /* Adjust spacing between buttons */
+}
+
+/* Button styling */
+.nav-button {
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+  transition: background 0.3s, transform 0.3s;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Hamburger menu (hidden by default for desktop) */
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  margin: 4px;
+  transition: 0.4s;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links in smaller screens */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show nav links when menu is open */
+  }
+}
